@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NHibernate.Mapping.ByCode.Conformist;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,16 @@ namespace RM_e.Model.Model
     {
         public string CPF { get; set; }
         public string Nome { get; set; }
+    }
+
+    public class PacienteMap : ClassMapping<Paciente>
+    {
+        public PacienteMap()
+        {
+            Table("paciente");
+
+            Id(x => x.CPF);
+            Property(x => x.Nome);
+        }
     }
 }
