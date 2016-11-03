@@ -1,0 +1,104 @@
+﻿@model RM_e.Model.Model.ReceitaMedicaBusca
+
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Receita @Html.DisplayFor(model => model.NumeroReceita)</h3>
+    </div>
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Paciente</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">CPF</h4>
+                                    @Html.DisplayFor(model => model.Paciente.CPF)
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Nome</h4>
+                                    @Html.DisplayFor(model => model.Paciente.Nome)
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Médico</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">CRM</h4>
+                                    @Html.DisplayFor(model => model.Medico.CRM)
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Nome</h4>
+                                    @Html.DisplayFor(model => model.Medico.Nome)
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-12">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Receita</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Data</h4>
+                                    @Html.DisplayFor(model => model.DataCadastro)
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Situação</h4>
+                                    @Html.DisplayFor(model => model.Situacao)
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="list-group" id="listaItensReceita">
+                        @foreach (var item in Model.Itens)
+                        {
+                            @Html.Partial("_ItemReceita", item)
+                        }
+                    </ul>
+                </div>
+
+                <a href="@Url.Action("Utilizar", "Receita", new { numeroReceita = Model.NumeroReceita })" class="btn btn-success">Utilizar Receita</a>
+                <a href="@Url.Action("Cancelar", "Receita", new { numeroReceita = Model.NumeroReceita })" class="btn btn-danger">Cancelar Receita</a>
+
+            </div>
+        </div>
+    </div>
+</div>

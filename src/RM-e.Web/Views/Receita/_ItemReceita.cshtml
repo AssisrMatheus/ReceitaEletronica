@@ -1,0 +1,42 @@
+﻿@model RM_e.Model.Model.ItemReceita
+
+<li class='list-group-item'>
+    <ul class="media-list row">
+        <li class="media col-md-6">
+            <div class="media-body">
+                <h4 class="media-heading">Número Anvisa</h4>
+                @Html.DisplayFor(model => model.Medicamento.NumAnvisa)
+            </div>
+        </li>
+
+        <li class="media col-md-6" style="margin-top: 0;">
+            <div class="media-body">
+                <h4 class="media-heading">Situação</h4>
+                @Html.DisplayFor(model => model.Medicamento.Nome)
+            </div>
+        </li>
+
+        <li class="media col-md-6">
+            <div class="media-body">
+                <h4 class="media-heading">Uso</h4>
+                @Html.DisplayFor(model => model.Medicamento.Uso)
+            </div>
+        </li>
+
+        <li class="media col-md-6">
+            <div class="media-body">
+                <h4 class="media-heading">Contra Indicação</h4>
+                @Html.DisplayFor(model => model.Medicamento.ContraIndicacao)
+            </div>
+        </li>
+
+        <div class="clearfix"></div>
+
+        <li class="media col-md-12">
+            <div class="media-body">
+                <h4 class="media-heading">Instrução</h4>
+                @Html.DisplayFor(model => model.Instrucao)
+            </div>
+        </li>
+    </ul>
+</li>

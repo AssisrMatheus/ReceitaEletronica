@@ -1,0 +1,49 @@
+﻿@model RM_e.Model.Model.ReceitaResult
+
+@{
+    ViewBag.Title = "Sucesso";
+}
+
+<h2>Sucesso!</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Mensagem)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CPFPaciente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPFPaciente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRMMedico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRMMedico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCadastro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroReceita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroReceita)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Voltar à lista", "Index")
+</p>

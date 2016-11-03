@@ -1,0 +1,16 @@
+﻿@if (!Html.ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger validation-box" role="alert">
+
+        <p style="margin: 0; padding: 0;">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            <strong>Oops!</strong>
+        </p>
+        <p style="margin: 0; padding: 0;">
+            Ocorreu um erro:
+        </p>
+
+        @Html.ValidationSummary(false)
+    </div>
+}
