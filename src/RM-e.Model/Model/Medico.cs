@@ -9,8 +9,8 @@ namespace RM_e.Model.Model
 {
     public class Medico
     {
-        public string CRM { get; set; }
-        public string Nome { get; set; }
+        public virtual string CRM { get; set; }
+        public virtual string Nome { get; set; }
     }
 
     public class MedicoMap : ClassMapping<Medico>

@@ -214,6 +214,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ItensReceita\ItensReceitaService.cs" />
     <Compile Include="Service\Medicos\MedicosService.cs" />
     <Compile Include="Service\Pacientes\PacientesService.cs" />
     <Compile Include="Service\Receitas\ReceitasService.cs" />

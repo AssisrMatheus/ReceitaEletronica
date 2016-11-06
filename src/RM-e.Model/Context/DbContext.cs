@@ -4,6 +4,7 @@ using NHibernate.Cfg.MappingSchema;
 using NHibernate.Context;
 using NHibernate.Mapping.ByCode;
 using RM_e.Model.Model;
+using RM_e.Model.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace RM_e.Model.Context
     {
         public static string StringConexao =
            "Persist Security Info=False;server=localhost;port=3306;" +
-           "database=cronometragem;uid=root;pwd=aluno";
+           "database=rmereceitas;uid=root;pwd=root";
 
         private ISessionFactory SessionFactory;
 
@@ -36,10 +37,21 @@ namespace RM_e.Model.Context
             }
         }
 
+        public ReceitaRepository ReceitasRepository { get; set; }
+        public MedicoRepository MedicoRepository { get; set; }
+        public PacienteRepository PacienteRepository { get; set; }
+        public ItemReceitaRepository ItemReceitaRepository { get; set; }
+        public MedicamentoRepository MedicamentoRepository { get; set; }
+
         public DbContext()
         {
             if (Conexao())
             {
+                this.ReceitasRepository = new ReceitaRepository(this.Session);
+                this.MedicoRepository = new MedicoRepository(this.Session);
+                this.PacienteRepository = new PacienteRepository(this.Session);
+                this.ItemReceitaRepository = new ItemReceitaRepository(this.Session);
+                this.MedicamentoRepository = new MedicamentoRepository(this.Session);
             }
         }
 
@@ -98,7 +110,23 @@ namespace RM_e.Model.Context
             var mapper = new ModelMapper();
 
             mapper.AddMappings(
-                Assembly.GetAssembly(typeof(EventoMap)).GetTypes()
+                Assembly.GetAssembly(typeof(ItemReceita)).GetTypes()
+            );
+
+            mapper.AddMappings(
+                Assembly.GetAssembly(typeof(Medicamento)).GetTypes()
+            );
+
+            mapper.AddMappings(
+                Assembly.GetAssembly(typeof(Medico)).GetTypes()
+            );
+
+            mapper.AddMappings(
+                Assembly.GetAssembly(typeof(Paciente)).GetTypes()
+            );
+
+            mapper.AddMappings(
+                Assembly.GetAssembly(typeof(ReceitaMedica)).GetTypes()
             );
 
             return mapper.CompileMappingForAllExplicitlyAddedEntities();
@@ -118,9 +146,9 @@ namespace RM_e.Model.Context
             }
         }
 
-        public static List<Medico> Medicos = new List<Medico>();
-        public static List<Paciente> Pacientes = new List<Paciente>();
-        public static List<ItemReceita> ItensReceita = new List<ItemReceita>();
-        public static List<ReceitaMedica> Receitas = new List<ReceitaMedica>();
+        //public static List<Medico> Medicos = new List<Medico>();
+        //public static List<Paciente> Pacientes = new List<Paciente>();
+        //public static List<ItemReceita> ItensReceita = new List<ItemReceita>();
+        //public static List<ReceitaMedica> Receitas = new List<ReceitaMedica>();
     }
 }

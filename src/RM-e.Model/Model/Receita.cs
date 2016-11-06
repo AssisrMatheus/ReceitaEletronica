@@ -8,13 +8,13 @@ namespace RM_e.Model.Model
 {
     public class Receita
     {
-        public Medico Medico { get; set; }
+        public virtual Medico Medico { get; set; }
 
-        public Paciente Paciente { get; set; }
+        public virtual Paciente Paciente { get; set; }
 
-        public IList<ItemReceita> Itens { get; set; }
+        public virtual IList<ItemReceita> Itens { get; set; }
 
-        public DateTime DataCadastro { get; set; }
+        public virtual DateTime DataCadastro { get; set; }
 
         public Receita()
         {

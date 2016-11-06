@@ -9,14 +9,14 @@ namespace RM_e.WebService.Service.Pacientes
 {
     public class PacientesService
     {
-        public void Cadastrar(Paciente paciente)
+        public bool Cadastrar(Paciente paciente)
         {
-            DbContext.Pacientes.Add(paciente);
+            return DbContext.Instance.PacienteRepository.Gravar(paciente);
         }
 
         public Paciente Buscar(string CPF)
         {
-            return DbContext.Pacientes.Where(x => x.CPF == CPF).FirstOrDefault();
+            return DbContext.Instance.PacienteRepository.GetAll().Where(x => x.CPF == CPF).FirstOrDefault();
         }
     }
 }

@@ -9,13 +9,13 @@ namespace RM_e.Model.Model
 {
     public class Medicamento
     {
-        public int NumAnvisa { get; set; }
+        public virtual int NumAnvisa { get; set; }
 
-        public string Nome { get; set; }
+        public virtual string Nome { get; set; }
 
-        public string Uso { get; set; }
+        public virtual string Uso { get; set; }
 
-        public string ContraIndicacao { get; set; }
+        public virtual string ContraIndicacao { get; set; }
     }
 
     public class MedicamentoMap : ClassMapping<Medicamento>

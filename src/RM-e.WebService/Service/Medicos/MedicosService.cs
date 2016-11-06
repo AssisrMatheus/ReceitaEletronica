@@ -9,14 +9,14 @@ namespace RM_e.WebService.Service.Medicos
 {
     public class MedicosService
     {
-        public void Cadastrar(Medico medico)
+        public bool Cadastrar(Medico medico)
         {
-            DbContext.Medicos.Add(medico);
+            return DbContext.Instance.MedicoRepository.Gravar(medico);
         }
 
         public Medico Buscar(string CRM)
         {
-            return DbContext.Medicos.Where(x => x.CRM == CRM).FirstOrDefault();
+            return DbContext.Instance.MedicoRepository.GetAll().Where(x => x.CRM == CRM).FirstOrDefault();
         }
     }
 }

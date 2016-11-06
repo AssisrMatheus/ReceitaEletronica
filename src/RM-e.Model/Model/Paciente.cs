@@ -9,8 +9,8 @@ namespace RM_e.Model.Model
 {
     public class Paciente
     {
-        public string CPF { get; set; }
-        public string Nome { get; set; }
+        public virtual string CPF { get; set; }
+        public virtual string Nome { get; set; }
     }
 
     public class PacienteMap : ClassMapping<Paciente>

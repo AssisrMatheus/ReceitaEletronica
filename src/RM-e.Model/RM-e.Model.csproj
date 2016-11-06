@@ -64,6 +64,11 @@
     <Compile Include="Model\ReceitaMedicaBusca.cs" />
     <Compile Include="Model\ReceitaResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ItemReceitaRepository.cs" />
+    <Compile Include="Repository\MedicamentoRepository.cs" />
+    <Compile Include="Repository\MedicoRepository.cs" />
+    <Compile Include="Repository\PacienteRepository.cs" />
+    <Compile Include="Repository\ReceitaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

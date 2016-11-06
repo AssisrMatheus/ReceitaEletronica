@@ -9,11 +9,11 @@ namespace RM_e.Model.Model
 {
     public class ItemReceita
     {
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
 
-        public Medicamento Medicamento { get; set; }
+        public virtual Medicamento Medicamento { get; set; }
 
-        public string Instrucao { get; set; }
+        public virtual string Instrucao { get; set; }
     }
 
     public class ItemReceitaMap : ClassMapping<ItemReceita>

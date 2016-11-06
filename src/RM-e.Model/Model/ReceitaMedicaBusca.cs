@@ -17,6 +17,7 @@ namespace RM_e.Model.Model
             this.Itens = receitaMedica.Itens;
             this.Medico = receitaMedica.Medico;
             this.Paciente = receitaMedica.Paciente;
+            this.DataCadastro = receitaMedica.DataCadastro;
             this.NumeroReceita = receitaMedica.NumeroReceita;
 
             if(receitaMedica.Cancelada)
