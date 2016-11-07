@@ -27,11 +27,11 @@ namespace RM_e.WebService
 
         public void Configuration(IAppBuilder app)
         {
-            var options = new CorsOptions();
-            app.UseCors(options);
+            HttpConfiguration config = new HttpConfiguration();
+            WebApiConfig.Register(config);
 
-            var api = new HttpConfiguration();
-            app.UseWebApi(api);
+            app.UseCors(CorsOptions.AllowAll);
+            app.UseWebApi(config);
         }
     }
 }
