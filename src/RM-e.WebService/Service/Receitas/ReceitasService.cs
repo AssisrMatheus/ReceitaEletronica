@@ -44,7 +44,7 @@ namespace RM_e.WebService.Receitas.Service
                 result.Ok = DbContext.Instance.ReceitasRepository.Gravar(receita);
                 if (!result.Ok)
                 {
-                    result.Mensagem = "Não foi possível gravar o Médico";
+                    result.Mensagem = "Não foi possível gravar a receita";
                     return result;                 
                 }
 
