@@ -17,8 +17,8 @@ namespace RM_e.Model.Context
     public class DbContext
     {
         public static string StringConexao =
-           "Persist Security Info=False;server=localhost;port=3306;" +
-           "database=rmereceitas;uid=root;pwd=root";
+           "server=rmematheusadow.mysql.dbaas.com.br;SslMode=Preferred;" +
+           "database=rmematheusadow;uid=rmematheusadow;pwd=dANADO$$2016";
 
         private ISessionFactory SessionFactory;
 
