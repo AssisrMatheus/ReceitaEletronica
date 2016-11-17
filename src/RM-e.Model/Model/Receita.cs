@@ -12,7 +12,7 @@ namespace RM_e.Model.Model
 
         public virtual Paciente Paciente { get; set; }
 
-        public virtual IList<ItemReceita> Itens { get; set; }
+        public virtual List<ItemReceita> Itens { get; set; }
 
         public virtual DateTime DataCadastro { get; set; }
 

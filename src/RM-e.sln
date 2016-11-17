@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RM-e.Web", "RM-e.Web\RM-e.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RM-e.Client", "RM-e.Client\RM-e.Client.csproj", "{FC55FB39-E780-42C1-8BEE-8E895B3CB972}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RM-e.Soap", "RM-e.Soap\RM-e.Soap.csproj", "{AB01BA05-1DAB-4E34-AD1F-39D9C9630AB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FC55FB39-E780-42C1-8BEE-8E895B3CB972}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC55FB39-E780-42C1-8BEE-8E895B3CB972}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC55FB39-E780-42C1-8BEE-8E895B3CB972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB01BA05-1DAB-4E34-AD1F-39D9C9630AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB01BA05-1DAB-4E34-AD1F-39D9C9630AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB01BA05-1DAB-4E34-AD1F-39D9C9630AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB01BA05-1DAB-4E34-AD1F-39D9C9630AB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
